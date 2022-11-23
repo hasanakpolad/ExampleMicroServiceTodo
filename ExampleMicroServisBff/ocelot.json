@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Todo/{everything}",
+      "UpstreamPathTemplate": "/Ocelot/Todo/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5226
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/User/{everything}",
+      "UpstreamPathTemplate": "/Ocelot/User/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5090
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7060"
+  }
+}
